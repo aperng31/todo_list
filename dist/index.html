@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+<script defer src="./index.main.js?10a88127e2cd93d50e16"></script></head>
+<body>
+    <header>
+        <h2>EZ-list</h2>
+    </header>
+
+    <div id="sidebar">
+        <h2>Projects</h2>
+        
+        <ul id="projects">
+
+        </ul>
+
+        <div id="add_project">
+            <input id="project_title" type="text">
+            <textarea id="project_desc"></textarea>
+            <button id="add_project_button">Add Project</button>
+        </div>
+
+    </div>
+
+    <div id="main">
+
+        <h2 id="current_project">TEST</h2>
+        <p id="current_project_desc"></p>
+
+        <table id="table">
+            <colgroup>
+                <col span="1" style="width: 5%;">
+                <col span="1" style="width: 20%;">
+                <col span="1" style="width: 45%;">
+                <col span="1" style="width: 10%; flex: 0 0 auto;">
+                <col span="1" style="width: 5%; flex: 0 0 auto;">
+                <col span="1" style="width: 5%; flex: 0 0 auto;">
+            </colgroup>
+            <thead>
+                <tr id="table_header">
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+
+        </table>
+
+        <div id="add_item">
+            <input id="item_title" type="text">
+            <input id="item_desc" type="text">
+            <input id="item_date" type="text">
+            <select id="item_priority">
+                <option value="" selected disabled>--priority--</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>  
+            <button id="add_item_button">Add Item</button>
+        </div>
+
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
