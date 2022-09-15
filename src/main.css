@@ -1,0 +1,41 @@
+#main {
+    padding: 20px;
+}
+
+#current_project {
+    width: 100%;
+    height: 50px;
+    margin: 6px;
+}
+
+#current_project_desc {
+    width: 100%;
+    height: 30px;
+    margin: 6px;
+}
+
+#table {
+    border: 1px solid black;
+
+    width: 100%;
+}
+
+thead {
+    width: 100%;
+}
+
+#table_header {
+    width: 100%;
+    border-spacing: 8px;
+}
+
+.header {
+    text-align: left;
+    border: 1px solid black;
+}
+
+
+.done {
+    background-color: greenyellow;
+    color: grey
+}

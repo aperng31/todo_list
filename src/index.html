@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+</head>
+<body>
+    <header>
+        <h2>EZ-list</h2>
+    </header>
+
+    <div id="sidebar">
+        <h2>Projects</h2>
+        
+        <ul id="projects">
+
+        </ul>
+
+        <div id="add_project">
+            <input id="project_title" type="text">
+            <textarea id="project_desc"></textarea>
+            <button id="add_project_button">Add Project</button>
+        </div>
+
+    </div>
+
+    <div id="main">
+
+        <h2 id="current_project">TEST</h2>
+        <p id="current_project_desc"></p>
+
+        <table id="table">
+            <!-- <colgroup>
+                <col span="1" style="width: 20px;">
+                <col span="1" style="width: 30%; min-width: 200px;">
+                <col span="1" style="width: 50%; min-width: 400px;">
+                <col span="1" style="width: 40px;">
+                <col span="1" style="width: 40px;">
+            </colgroup> -->
+            <thead>
+                <tr id="table_header">
+                    <th style="max-width: 30px; min-width: 30px;"></th>
+                    <th style="width: 30%; min-width: 200px;"><div class="header" style="width: 100px;">Item</div></th>
+                    <th style="width: 60%; min-width: 400px;"><div class="header" style="width: 120px;">Description</div></th>
+                    <th style="max-width: 70px; min-width: 70px"><div class="header" style="width: 60px;">Priority</div></th>
+                    <th style="max-width: 30px; min-width: 30px;"></th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+
+        </table>
+
+        <div id="add_item">
+            <input id="item_title" type="text">
+            <input id="item_desc" type="text">
+            <select id="item_priority">
+                <option value="" selected disabled>--priority--</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>  
+            <button id="add_item_button">Add Item</button>
+        </div>
+
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
