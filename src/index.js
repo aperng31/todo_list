@@ -25,7 +25,7 @@ const DOM_cont_proj = (() => { //IIFE
 
         const newDiv = document.createElement('div');
         newDiv.innerHTML = newProj.getTitle();
-
+        
         newDiv.addEventListener('click', () => changeProject(newProj)); //when clicked, sets current project
 
         //add delete button
@@ -44,6 +44,7 @@ const DOM_cont_proj = (() => { //IIFE
             DOM_cont_item.greyList(false);
             DOM_cont_item.itemPop(newProj);
         }
+        changeProject(newProj);
     }
 
     const deleteProject = (proj) => {  
@@ -65,9 +66,17 @@ const DOM_cont_proj = (() => { //IIFE
     }
 
     const changeProject = (proj) => {//switch to curr project
-        main.setCurr(proj);
+        if (main.getCurrChild()) { //make sure that there is an existing project
+            const currChild = document.querySelector(`#projects li:nth-child(${main.getCurrChild()}`);
+            currChild.classList.remove('clicked');
+        }
+        //get child number, add class to corres child
+        const newCurr = document.querySelector(`#projects li:nth-child(${main.setCurr(proj)}`);
+        newCurr.classList.add('clicked');
         DOM_cont_item.clearTable();
         DOM_cont_item.itemPop(proj);
+
+
     }
 
     return { addProject }

@@ -35,12 +35,15 @@ const main = (() => { //IIFE
     const getCurr = () => {
         return projectList[currProj];
     }
-    const setCurr = (proj) => {
+    const getCurrChild = () => {
+        return currProj + 1;
+    }
+    const setCurr = (proj) => {   
         const ind = projectList.indexOf(proj);
         currProj = ind; //or pass in project and use indexof?
         return ind + 1;
     }
-    return { addProject, deleteProject, getCurr, setCurr, getProjects }
+    return { addProject, deleteProject, getCurr, setCurr, getProjects, getCurrChild }
 })();
 
 export default main;

@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <header>
+    <header id="body_header">
         <h2>EZ-list</h2>
     </header>
 
@@ -20,9 +20,9 @@
         </ul>
 
         <div id="add_project">
-            <input id="project_title" type="text">
-            <textarea id="project_desc"></textarea>
-            <button id="add_project_button">Add Project</button>
+            <input id="project_title" type="text" placeholder="What's your project called?">
+            <textarea id="project_desc" placeholder="What's your project about?"></textarea>
+            <button id="add_project_button">Add</button>
         </div>
 
     </div>
@@ -50,8 +50,8 @@
         </table>
 
         <div id="add_item">
-            <input id="item_title" type="text">
-            <input id="item_desc" type="text">
+            <input id="item_title" type="text" placeholder="Item Name">
+            <input id="item_desc" type="text" placeholder="Item Description">
             <select id="item_priority">
                 <option value="" selected disabled>--priority--</option>
                 <option value="high">High</option>
@@ -64,7 +64,8 @@
     </div>
 
     <footer>
-
+        <span>Website designed by Alan Perng</span>
+        <a class="github" href='https://github.com/aperng31'><img src="/Users/aperng31/repos/todo_list/src/github.png" alt="github"></a>
     </footer>
 </body>
 </html>
