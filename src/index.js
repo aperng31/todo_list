@@ -84,13 +84,12 @@ const DOM_cont_item = (() => {
 
     const addItemButton = document.querySelector('#add_item_button');
     addItemButton.onclick = () => {
-        console.log(main.getCurr());
+        //console.log(main.getCurr());
         const newItemInd = main.getCurr().addItem(itemName.value, itemDesc.value, itemPriority.value);
         addItem(newItemInd[0], newItemInd[1]); //array of newItem and ind
         itemName.value = '';
         itemDesc.value = '';
         itemPriority.value = '';
-        //current project.addItem(newItem);
     }
 
     const addItem = (newItem, ind) => {
@@ -117,6 +116,7 @@ const DOM_cont_item = (() => {
         newTr.appendChild(priorityTd);
 
         //add delete button
+        const delTd = document.createElement('td');
         const delButton = document.createElement('input'); //image button to respond to 'click' to delete row and book
         delButton.type = "image";
         delButton.src = trash;
@@ -125,7 +125,8 @@ const DOM_cont_item = (() => {
         delButton.onclick = () => { //button event that corres w/ project
             deleteItem(newItem);
         }
-        newTr.appendChild(delButton);
+        delTd.appendChild(delButton);
+        newTr.appendChild(delTd);
 
         if (ind != undefined) {
             const refNode = document.querySelector(`#tbody tr:nth-child(${ind})`)
@@ -169,10 +170,16 @@ const DOM_cont_item = (() => {
         currDesc.innerHTML = '(no more work to do?)';
     }
 
-    return { itemPop, clearTable, greyList };
+    return { itemPop, clearTable, greyList, addItem };
 })();
 
-let proj1 = main.addProject(1, 11);
+let proj1 = main.addProject('Lorem Ipsum', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book');
 DOM_cont_proj.addProject(proj1);
 DOM_cont_proj.addProject(main.addProject(2, 22))
 DOM_cont_proj.addProject(main.addProject(3, 33))
+
+const temp1 = main.getCurr().addItem('Loremus Ipsumus', 'Contrary to popular belief, Lorem Ipsum is not simply random text.', 'high');
+DOM_cont_item.addItem(temp1[0], temp1[1]); //array of newItem and ind
+
+const temp2 = main.getCurr().addItem('Loremius Ispsumius', 'There are many variations of passages of Lorem Ipsum available', 'low');
+DOM_cont_item.addItem(temp2[0], temp2[1]); //array of newItem and ind

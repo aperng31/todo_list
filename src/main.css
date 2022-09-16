@@ -4,20 +4,21 @@
 
 #current_project {
     width: 100%;
-    height: 50px;
+    min-height: 30px;
     margin: 6px;
 }
 
 #current_project_desc {
     width: 100%;
-    height: 30px;
+    min-height: 24px;
     margin: 6px;
 }
 
 #table {
-    border: 1px solid black;
-
+    /* border: 1px solid black; */
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
 }
 
 thead {
@@ -26,16 +27,83 @@ thead {
 
 #table_header {
     width: 100%;
-    border-spacing: 8px;
+
 }
 
 .header {
     text-align: left;
     border: 1px solid black;
+    padding: 4px 12px 4px 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: fit-content;
+}
+
+.itemDiv {
+    width: 100%;
+}
+
+.item {
+    outline: thin solid;
+    background-color: peachpuff;
+    height: 36px;
+    font-size: 14px;
+}
+
+td {
+    height: 36px;
+    padding-left: 10px;
 }
 
 
 .done {
-    background-color: greenyellow;
-    color: grey
+    background-color: #AFE1AF;
+    color: black;
+    opacity: .4;
+}
+
+#add_item {
+    border: 1px solid black;
+    background-color: peachpuff;
+    height: 36px;
+    font-size: 14px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#item_title {
+    margin-left: 40px;
+    padding-left: 8px;
+    border-radius: 8px;
+    height: 22px;
+    font-size: 14px;
+    width: 25%;
+}
+
+#item_desc {
+    width: 50%;
+    padding-left: 8px;
+    border-radius: 8px;
+    height: 22px;
+    font-size: 14px;
+    margin-left: 1%;
+}
+
+#item_priority {
+    width: 90px;
+    padding: 0px 3px 0px 3px;
+    margin-left: 2.5%;
+    border-radius: 8px;
+    height: 22px;
+    font-size: 14px;
+}
+
+#add_item_button {
+    border-radius: 8px;
+    height: 26px;
+    font-size: 14px;
 }
